@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://stylus-lang.com/">
-    <img alt="Express" src="//stylus-lang.com/img/stylus-logo.svg" width="393"/>
+    <img alt="Stylus" src="http://stylus-lang.com/img/stylus-logo.svg" width="393"/>
   </a>
 </p>
 
