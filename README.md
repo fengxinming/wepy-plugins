@@ -64,8 +64,8 @@ module.exports = {
         isProd: process.env.NODE_ENV === 'production'
       },
       include: [],                                    // 等价于 paths: [__dirname, __dirname + '/utils']，将目录暴露给全局
-      import: [                                       // 导入自定义的functions和mixins等
-        path.join('src', 'css', 'utils', '**/*.styl')
+      import: [                                       // 导入自定义的functions和mixins等，千万不要导入全局公共样式，否则你懂的哦
+        path.join('src', 'css', 'utils', '**/*.styl')
       ],
       use: [],                                        // 导入插件nib、poststylus等
       url: 'inline-url',                              // 使用base64将图片转码
