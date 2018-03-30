@@ -70,6 +70,7 @@ module.exports = {
       use: [],                                        // 导入插件nib、poststylus等
       url: 'inline-url',                              // 使用base64将图片转码
       url: {
+        name: 'inline-url',
         limit: 30000,                                 // 限制多少B以内的图片被压缩
         paths: []                                     // 从指定的目录下查找图片
       }
