@@ -5,7 +5,7 @@
 </p>
 
 # wepy stylus 编译器
-> Note: wepy官方对`wepy-compiler-stylus`封装的不是友好，不太方便开发者配置一些高级特性，因此重新封装了一个stylus的编译插件`wepy-compiler-styl`
+> Note: wepy官方提供的插件`wepy-compiler-stylus`对stylus的封装不太友好，不方便开发者配置一些高级特性，因此重新封装了一个stylus的编译插件`wepy-compiler-styl`
 
 ---
 
