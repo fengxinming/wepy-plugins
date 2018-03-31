@@ -1,9 +1,3 @@
-<p align="center">
-  <a href="http://stylus-lang.com/">
-    <img alt="Stylus" src="http://stylus-lang.com/img/stylus-logo.svg" width="393"/>
-  </a>
-</p>
-
 # wepy stylus 编译器
 
 [![npm package](https://nodei.co/npm/wepy-compiler-styl.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/wepy-compiler-styl)
@@ -13,6 +7,12 @@
 > 如果该插件对您的开发有所帮助，请五星好评哦！^_^ ^_^ ^_^
 
 ---
+
+<p align="center">
+  <a href="http://stylus-lang.com/">
+    <img alt="Stylus" src="http://stylus-lang.com/img/stylus-logo.svg" width="393"/>
+  </a>
+</p>
 
 ## Table of contents
 
