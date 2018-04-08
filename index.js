@@ -10,13 +10,11 @@ module.exports = function (content, config, file) {
     config.paths = [opath.dir];
     config.filename = opath.base;
 
-    const instance = stylus(content);
     const sets = {};
     const defines = {};
     const rawDefines = {};
     let includes = [];
     let imports = [];
-    let plugins = [];
     let v;
 
     Object.keys(config).forEach(k => {
@@ -33,9 +31,6 @@ module.exports = function (content, config, file) {
           break;
         case 'import':
           imports.push(v);
-          break;
-        case 'use':
-          plugins.push(v);
           break;
         case 'url':
           let obj;
@@ -58,9 +53,19 @@ module.exports = function (content, config, file) {
           sets[k] = v;
       }
     });
+
+    delete config.define;
+    delete config.rawDefine;
+    delete config.include;
+    delete config['import'];
+    delete config.url;
+    delete config.includeCSS;
+
+    const instance = stylus(content, config);
+
     includes = flatten(includes);
     imports = flatten(imports);
-    plugins = flatten(plugins);
+
     Object.keys(sets).forEach(key => {
       instance.set(key, sets[key]);
     });
@@ -75,9 +80,6 @@ module.exports = function (content, config, file) {
     });
     (imports || []).forEach(n => {
       instance['import'](n);
-    });
-    (plugins || []).forEach(n => {
-      instance.use(n);
     });
 
     imports = instance.deps();

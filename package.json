@@ -1,6 +1,6 @@
 {
   "name": "wepy-compiler-styl",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "a stylus compiler for wepy",
   "main": "index.js",
   "scripts": {
