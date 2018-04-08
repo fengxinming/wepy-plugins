@@ -37,7 +37,6 @@
   * globals
   * functions
   * use
-  * imports
   * paths
   * filename
   * Evaluator
@@ -95,9 +94,6 @@ module.exports = {
       },
       functions: {}                                   // 外部传入全局函数
       use: [],                                        // 导入插件nib、poststylus等
-      imports: [                                      // 导入自定义的functions和mixins等，千万不要导入全局公共样式，否则你懂的哦
-        path.join('src', 'css', 'utils', '**/*.styl')
-      ],
       paths: [],                                      // 将目录暴露给全局
       filename: [],                                   // 设置文件名
       Evaluator: Object                               // 没用过，我也不知道
