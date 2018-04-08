@@ -30,10 +30,20 @@
   * rawDefine
   * include
   * import
-  * use
+  * includeCSS
   * url
 
-## installation
+### Original features
+  * globals
+  * functions
+  * use
+  * imports
+  * paths
+  * filename
+  * Evaluator
+  * ...
+
+## Installation
 
 ```
 cnpm install wepy-compiler-styl --save-dev
@@ -65,20 +75,32 @@ module.exports = {
       compress: true,                                 // 压缩
       includeCSS: true,                               // 支持导入css
       supportObject: true,                            // 支持以下参数
-      define: {                                       // 控制不同环境的样式处理
-        isProd: process.env.NODE_ENV === 'production'
+      define: {                                       // 外部传入全局变量和函数
+        isProd: process.env.NODE_ENV === 'production' // 举例：控制不同环境的样式处理
       },
       include: [],                                    // 等价于 paths: [__dirname, __dirname + '/utils']，将目录暴露给全局
       import: [                                       // 导入自定义的functions和mixins等，千万不要导入全局公共样式，否则你懂的哦
         path.join('src', 'css', 'utils', '**/*.styl')
       ],
-      use: [],                                        // 导入插件nib、poststylus等
       url: 'inline-url',                              // 使用base64将图片转码
       url: {
         name: 'inline-url',
         limit: 30000,                                 // 限制多少B以内的图片被压缩
         paths: []                                     // 从指定的目录下查找图片
-      }
+      },
+
+      // ============= stylus 内部参数 =============
+      globals: {                                      // 外部传入全局变量
+        isProd: process.env.NODE_ENV === 'production'
+      },
+      functions: {}                                   // 外部传入全局函数
+      use: [],                                        // 导入插件nib、poststylus等
+      imports: [                                      // 导入自定义的functions和mixins等，千万不要导入全局公共样式，否则你懂的哦
+        path.join('src', 'css', 'utils', '**/*.styl')
+      ],
+      paths: [],                                      // 将目录暴露给全局
+      filename: [],                                   // 设置文件名
+      Evaluator: Object                               // 没用过，我也不知道
     }
   }
 };
