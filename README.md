@@ -44,7 +44,7 @@
 
 ## Installation
 
-```
+```bash
 cnpm install wepy-compiler-styl --save-dev
 ```
 
@@ -65,30 +65,17 @@ module.exports = {
 
 ## Examples
 
-```
+
+```javascript
 // configure wepy.config.js
 
 module.exports = {
   compilers: {
     styl: {
+      supportObject: true,                            // 不是很确定，wepy的作者比较清楚
+    
+      // ============= stylus 支持参入的参数 =============
       compress: true,                                 // 压缩
-      includeCSS: true,                               // 支持导入css
-      supportObject: true,                            // 支持以下参数
-      define: {                                       // 外部传入全局变量和函数
-        isProd: process.env.NODE_ENV === 'production' // 举例：控制不同环境的样式处理
-      },
-      include: [],                                    // 等价于 paths: [__dirname, __dirname + '/utils']，将目录暴露给全局
-      import: [                                       // 导入自定义的functions和mixins等，千万不要导入全局公共样式，否则你懂的哦
-        path.join('src', 'css', 'utils', '**/*.styl')
-      ],
-      url: 'inline-url',                              // 使用base64将图片转码
-      url: {
-        name: 'inline-url',
-        limit: 30000,                                 // 限制多少B以内的图片被压缩
-        paths: []                                     // 从指定的目录下查找图片
-      },
-
-      // ============= stylus 内部参数 =============
       globals: {                                      // 外部传入全局变量
         isProd: process.env.NODE_ENV === 'production'
       },
@@ -96,7 +83,23 @@ module.exports = {
       use: [],                                        // 导入插件nib、poststylus等
       paths: [],                                      // 将目录暴露给全局
       filename: [],                                   // 设置文件名
-      Evaluator: Object                               // 没用过，我也不知道
+      Evaluator: Object,                              // 没用过，我也不知道
+      
+      // ============= 扩展属性，兼容gulp-stylus或者stylus-loader的传参
+      includeCSS: true,                               // 支持导入css
+      define: {                                       // 外部传入全局变量和函数
+        isProd: process.env.NODE_ENV === 'production' // 举例：控制不同环境的样式处理
+      },
+      include: [],                                    // 等价于 paths: [__dirname, __dirname + '/utils']，将目录暴露给全局
+      import: [                                       // 将src/css/utils目录下的所有文件加入到编译环境中，其它的styl就不需要@require或者@import该目录下的文件，在该目录下可以定义全局变量、function和mixin等，千万不要把样式放入该目录，否则所有的styl文件都重复包含该样式
+        path.join('src', 'css', 'utils', '**/*.styl')
+      ],
+      url: 'inline-url',                              // 使用base64将图片转码
+      url: {
+        name: 'inline-url',
+        limit: 30000,                                 // 限制多少B以内的图片被压缩
+        paths: []                                     // 从指定的目录下查找图片
+      },
     }
   }
 };
