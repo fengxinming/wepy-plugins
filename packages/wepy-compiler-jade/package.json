@@ -1,0 +1,34 @@
+{
+  "name": "wepy-compiler-jade",
+  "version": "2.0.1",
+  "description": "a template compiler for wepy as pug, jade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/wepy-compiler-jade.git"
+  },
+  "keywords": [
+    "wepy",
+    "wepy-compiler-jade",
+    "wepy-compiler-pug",
+    "weapp",
+    "weapp",
+    "wx",
+    "pug",
+    "jade"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/wepy-compiler-jade/issues"
+  },
+  "homepage": "https://github.com/fengxinming/wepy-compiler-jade#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "pretty": "^2.0.0",
+    "pug": "^2.0.3"
+  }
+}

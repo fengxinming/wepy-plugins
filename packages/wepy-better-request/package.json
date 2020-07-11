@@ -1,0 +1,32 @@
+{
+  "name": "wepy-better-request",
+  "version": "1.0.2",
+  "description": "a better request for wepy.request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/wepy-better-request.git"
+  },
+  "keywords": [
+    "wepy",
+    "wepy.request",
+    "wepy-better-request",
+    "wepy-request",
+    "request",
+    "http"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/wepy-better-request/issues"
+  },
+  "homepage": "https://github.com/fengxinming/wepy-better-request#readme",
+  "devDependencies": {
+    "eslint": "^^5.15.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "wepy-compiler-styl",
+  "version": "2.0.0",
+  "description": "a stylus compiler for wepy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/wepy-compiler-styl.git"
+  },
+  "keywords": [
+    "wepy",
+    "stylus",
+    "wepy-compiler-stylus",
+    "wepy-compiler-styl",
+    "weapp",
+    "wechat",
+    "wx"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/wepy-compiler-styl/issues"
+  },
+  "homepage": "https://github.com/fengxinming/wepy-compiler-styl#readme",
+  "dependencies": {
+    "lodash.flatten": "^4.4.0",
+    "stylus": "^0.54.5"
+  }
+}

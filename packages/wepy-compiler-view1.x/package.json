@@ -1,0 +1,34 @@
+{
+  "name": "wepy-compiler-view",
+  "version": "1.0.2",
+  "description": "a template compiler for wepy as pug, jade, hbs, swig, anything",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/wepy-compiler-view.git"
+  },
+  "keywords": [
+    "wepy",
+    "wepy-compiler-pug",
+    "weapp",
+    "wechat",
+    "wx",
+    "pug",
+    "jade",
+    "hbs",
+    "swig"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/wepy-compiler-view/issues"
+  },
+  "homepage": "https://github.com/fengxinming/wepy-compiler-view#readme",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "pretty": "^2.0.0"
+  }
+}

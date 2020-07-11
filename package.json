@@ -1,32 +1,28 @@
 {
-  "name": "wepy-compiler-styl",
-  "version": "2.0.0",
-  "description": "a stylus compiler for wepy",
+  "name": "wepy-plugins",
+  "version": "1.0.0",
+  "description": "wepy plugins",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengxinming/wepy-compiler-styl.git"
+    "url": "git+https://github.com/fengxinming/wepy-plugins.git"
   },
-  "keywords": [
-    "wepy",
-    "stylus",
-    "wepy-compiler-stylus",
-    "wepy-compiler-styl",
-    "weapp",
-    "wechat",
-    "wx"
-  ],
   "author": "Jesse Feng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fengxinming/wepy-compiler-styl/issues"
+    "url": "https://github.com/fengxinming/wepy-plugins/issues"
   },
-  "homepage": "https://github.com/fengxinming/wepy-compiler-styl#readme",
+  "homepage": "https://github.com/fengxinming/wepy-plugins#readme",
   "dependencies": {
-    "lodash.flatten": "^4.4.0",
-    "stylus": "^0.54.5"
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }
